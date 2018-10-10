@@ -1,10 +1,11 @@
 # cod-api-redux
-Get Call of Duty Stats
+
+## Get Call of Duty Stats
 
 This is a Redux reducer I'm using with React.
 
-Example data:
-
+### Example data:
+```
   // bo3, iw, wwii
   const title = "bo3";
   // psn, xbl, steam
@@ -19,9 +20,10 @@ Example data:
   const time = "monthly";
   // career, war (Team Deathmatch), dm (Free-For-All), conf (Kill Confirmed), ctf (Capture The Flag), sd (Search & Destroy), dom (Domination), ball (Gridiron), hp (Hardpoint), 1v1, raid (War)
   const mode = "war";
+```
 
-Reducer:
-
+### Reducer:
+```
 import React from 'react';
 import axios from 'axios';
 import { setFlash } from './flash';
@@ -74,10 +76,10 @@ export default (state = {}, action) => {
       return state;
   }
 };
+```
 
-
-Example React component:
-
+### Example React component:
+```
 import React from 'react';
 import {
   Dropdown,
@@ -179,3 +181,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Profile)
+```
